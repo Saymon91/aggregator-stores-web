@@ -19,12 +19,10 @@
                         | list of shops
                     table.table.table-striped
                         tr
-                            th ID
                             th Title
                             th Description
                             th Action
                         tr( v-for="(shop, index) in shops", :key="index" )
-                            td( @click="$router.push({ name: 'ViewProduct', params: { shop: shop._id, title: shop.title } })" ) {{ shop._id }}
                             td( @click="$router.push({ name: 'ViewProduct', params: { shop: shop._id, title: shop.title } })" ) {{ shop.title }}
                             td( @click="$router.push({ name: 'ViewProduct', params: { shop: shop._id, title: shop.title } })" ) {{ shop.description }}
                             td
